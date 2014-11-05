@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TravelPlanner</string>
+    <string name="app_title">GoEuro</string>
+    <string name="action_settings">Einstellung</string>
+    <string name="input_from_text">Von: Stadt oder Ort</string>
+    <string name="input_to_text">Nach: Stadt oder Ort</string>
+    <string name="search">Suchen</string>
+    <string name="search_not_implemented">Suche ist noch nicht implementiert</string>
+
+</resources>

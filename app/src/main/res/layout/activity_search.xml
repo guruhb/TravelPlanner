@@ -1,0 +1,123 @@
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_title"
+                android:textSize="@android:dimen/app_icon_size"
+                android:id="@+id/textView"
+                 />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_text_height"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal">
+                <com.guruhb.travelplanner.SearchLocationTextView
+                    android:id="@+id/sourceLocationTextId"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/input_from_text"
+                    android:imeOptions="flagNoExtractUi|actionSearch"/>
+
+                <ProgressBar
+                    android:id="@+id/sourceLocationProgressId"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="40dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_text_height"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal">
+                <com.guruhb.travelplanner.SearchLocationTextView
+                    android:id="@+id/destinationLocationTextId"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/input_to_text"
+                    android:imeOptions="flagNoExtractUi|actionSearch"/>
+
+                <ProgressBar
+                    android:id="@+id/destinationLocationProgressId"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:gravity="center"
+                    android:color="#0099CC"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_text_height"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center_horizontal"
+                android:focusableInTouchMode="true">
+                <EditText
+                    android:id="@+id/editTextCalendarId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="false"
+                    android:gravity="left"
+                    android:inputType="date"
+
+                    />
+
+                <Button
+                    android:id="@+id/calenderButtonId"
+                    style="@style/statusIconsPosition"
+
+                    android:drawableLeft="@drawable/calender_icon"
+                    android:paddingLeft="8dip"
+                    android:layout_gravity="right"
+                    android:background="@drawable/input_border"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/searchButtonId"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/search"
+                android:layout_marginTop="48dp"
+                android:drawableLeft="@drawable/ic_search"
+                android:drawablePadding="-10dp"
+                android:background="@drawable/search_button"
+            />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
